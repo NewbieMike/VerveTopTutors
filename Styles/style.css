@@ -1,40 +1,111 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/roboto-regular.woff2") format("woff2"),
-    url("fonts/roboto-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/roboto-bold.woff2") format("woff2"),
-    url("fonts/roboto-bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("fonts/poppins-regular.woff2") format("woff2"),
-    url("fonts/poppins-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("fonts/poppins-bold.woff2") format("woff2"),
-    url("fonts/poppins-bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
 body {
   font-family: "Roboto", sans-serif;
 }
-
+.nav-link,
 h1,
 h2 {
   font-family: "Poppins", sans-serif;
+}
+/* NAVIGATION */
+nav.navbar {
+  z-index: 999;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  height: 90px;
+}
+.navbar-brand {
+  font-size: 30px;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-size: 26px;
+  padding: 10px 20px;
+  transition: 0.4s ease-in-out;
+}
+.navbar-expand-lg .navbar-nav .nav-link.active {
+  color: rgb(230, 189, 186);
+  text-decoration: underline;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: rgb(230, 189, 186);
+  text-decoration: underline;
+}
+/* HOME */
+.video_container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+.background_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 101%;
+  object-fit: cover;
+}
+.home_logo_img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 400px;
+  height: 400px;
+}
+.home_welcome {
+  text-align: center;
+  width: 100%;
+}
+.home_description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.home_description_text {
+  font-size: 20px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+.button {
+  text-decoration: none;
+  padding: 15px 40px;
+  background-color: rgb(230, 189, 186);
+  color: #fff;
+  border-radius: 40px;
+  font-size: 30px;
+  border: 5px solid rgb(230, 189, 186);
+  transition: 0.4s ease-in-out;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+.home_button {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button:hover {
+  color: rgb(230, 189, 186);
+  background-color: #fff;
+}
+
+/* WHATSAPP */
+.whats_app_bubble {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  border: 5px solid black;
+  border-radius: 50%;
 }
