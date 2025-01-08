@@ -215,3 +215,31 @@ a.footer_link {
 .footer_signature a {
   color: rgb(230, 189, 186);
 }
+/* CONTACT */
+.section_contact {
+  background-color: #000;
+  /* height: 50vh; */
+}
+.section_contact .section_title {
+  text-align: start;
+}
+.contact_container {
+  padding-top: 150px;
+  display: flex;
+  padding-bottom: 200px;
+}
+.section_contact .footer_link {
+  color: rgb(230, 189, 186);
+  padding: 5px;
+  margin: 5px;
+}
+.contact_links {
+  flex: 1;
+}
+.contact_img {
+  flex: 1;
+}
+.contact_img img {
+  width: 500px;
+  height: 500px;
+}
