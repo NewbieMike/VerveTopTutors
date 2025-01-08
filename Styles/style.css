@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -12,16 +15,16 @@ nav.navbar {
   position: fixed;
   background-color: #fff;
   width: 100%;
-  height: 90px;
+  height: 70px;
 }
 .navbar-brand {
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   flex: 1;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  font-size: 26px;
+  font-size: 20px;
   padding: 10px 20px;
   transition: 0.4s ease-in-out;
 }
@@ -37,7 +40,7 @@ nav.navbar {
 .video_container {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 .background_image {
   position: absolute;
@@ -64,7 +67,7 @@ nav.navbar {
 }
 .home_description {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -73,11 +76,10 @@ nav.navbar {
   flex-direction: column;
 }
 .home_description_text {
-  font-size: 20px;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
   font-weight: 500;
-  text-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
 }
 .button {
   text-decoration: none;
@@ -92,7 +94,7 @@ nav.navbar {
 }
 .home_button {
   position: absolute;
-  bottom: 20%;
+  bottom: 80px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -100,7 +102,67 @@ nav.navbar {
   color: rgb(230, 189, 186);
   background-color: #fff;
 }
-
+/* REVIEWS */
+.section_title {
+  color: rgb(230, 189, 186);
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 44px;
+}
+.section_subtitle {
+  color: rgb(230, 189, 186);
+  text-align: center;
+}
+div.col {
+  height: 100%;
+}
+.card_footer_img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+.card-text {
+  min-height: 350px;
+}
+.card_footer_name {
+  color: #fff;
+  margin-left: 5px;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+/* SLOGAN */
+.slogan_section {
+  margin-top: 50px;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+.slogan_section .button {
+  font-size: 26px;
+  padding: 10px 20px;
+  margin: 30px;
+}
+.first_line_text {
+  padding-top: 20px;
+}
+.color_slogn_text {
+  font-size: 90px;
+  color: rgb(230, 189, 186);
+  margin-bottom: 50px;
+}
+.slogan_rating {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
 /* WHATSAPP */
 .whats_app_bubble {
   position: fixed;
@@ -108,4 +170,48 @@ nav.navbar {
   right: 60px;
   border: 5px solid black;
   border-radius: 50%;
+}
+.card {
+  background-color: rgb(230, 189, 186);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+  color: #fff;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.card-text {
+  color: #fff;
+}
+/* FOOTER */
+
+.container_column {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer_logo {
+  width: 250px;
+  height: 200px;
+}
+.footer_links {
+  display: flex;
+  flex-direction: column;
+}
+a.footer_link {
+  text-decoration: none;
+  color: #000;
+  text-decoration: underline;
+}
+.footer_signature {
+  background-color: #000;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.footer_signature a {
+  color: rgb(230, 189, 186);
 }
