@@ -296,6 +296,13 @@ a.footer_link {
   padding: 5px 0;
 }
 
+/* USER AGREEMENT */
+.end_user_agreement_section {
+  padding-top: 70px;
+
+  font-weight: 500;
+  line-height: 40px;
+}
 /* MEDIA */
 @media (max-width: 800px) {
   .home_logo_img {
