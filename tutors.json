@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Dalize",
+    "languages": "English and Afrikaans",
+    "subjects": ["English", "Afrikaans", "Maths", "Life orientation"],
+    "ages": "11-15 years old",
+    "imageUrl": "./Images/name_text.png",
+    "contactLink": "https://wa.me/27823218939",
+    "bookLink": "https://calendly.com/dalizeverve/tutoring"
+  }
+]

@@ -247,3 +247,48 @@ a.footer_link {
   width: 500px;
   height: 500px;
 }
+
+/* TUTORS */
+
+.section_tutors {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+.card-img-top {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 1px solid #fff;
+}
+.column_tutor_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.column_tutor_card_description {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.card_tutor {
+  background-color: #000;
+  box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.08);
+}
+.color_pink {
+  color: rgb(230, 189, 186);
+}
+.btn_tutor_card {
+  padding: 5px;
+  width: 250px;
+  margin: 15px 0;
+  text-align: center;
+}
+.tutor_subtitle,
+.tutor_title {
+  padding-bottom: 15px;
+}
+.tutor_skills li {
+  padding: 5px 0;
+}
