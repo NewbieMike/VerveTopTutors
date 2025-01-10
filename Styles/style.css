@@ -296,10 +296,57 @@ a.footer_link {
   padding: 5px 0;
 }
 
+/* BECOME TUTOR */
+.advantages_section {
+  padding-top: 70px;
+}
+.advantages_section .col {
+  padding: 25px 0;
+}
+.join_as_tutor_section {
+  padding-top: 100px;
+  /* min-height: 75vh; */
+  color: rgb(230, 189, 186);
+}
+
+.advantages_section .color_slogn_text,
+.join_as_tutor_section .color_slogn_text {
+  color: #000;
+  text-align: center;
+}
+
+.join_as_tutor_section .button {
+  width: 350px;
+  text-align: center;
+}
+
+.card_transparent {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.card_header svg {
+  width: 200px;
+  height: 200px;
+  padding-bottom: 10px;
+}
+.card_description {
+  background-color: #000;
+  border-radius: 40px;
+  min-height: 150px;
+  color: #fff;
+}
+.description_title {
+  font-weight: 500;
+  padding: 10px 0;
+}
+.description_text {
+  padding: 20px;
+}
 /* USER AGREEMENT */
 .end_user_agreement_section {
-  padding-top: 70px;
-
+  padding-top: 30px;
   font-weight: 500;
   line-height: 40px;
 }
