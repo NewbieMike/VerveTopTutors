@@ -197,15 +197,23 @@
     <script>
       AOS.init();
 
-      function createTutorCard(tutor) {
+      async function createTutorCard(tutor) {
+        const imagePath = `./Images/Tutors_images/${tutor.name}.jpg`;
+        const defaultImagePath = `./Images/name_text.png`;
+
+        const imageSrc = await new Promise((resolve) => {
+          const img = new Image();
+          img.src = imagePath;
+          img.onload = () => resolve(imagePath);
+          img.onerror = () => resolve(defaultImagePath);
+        });
+
         return `
     <div class="col">
       <div class="card h-100 p-4 card_tutor" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col column_tutor_card">
-            <img src="${tutor.imageUrl}" class="card-img-top" alt="${
-          tutor.name
-        }" />
+            <img src="${imageSrc}" class="card-img-top" alt="${tutor.name}" />
             <a href="${
               tutor.contactLink
             }" class="button btn_tutor_card">Contact Me</a>
@@ -235,20 +243,23 @@
     </div>`;
       }
 
-      function loadTutors() {
-        fetch("tutors.json")
-          .then((response) => response.json())
-          .then((data) => {
-            const tutorContainer = document.getElementById("tutor-container");
-            data.forEach((tutor) => {
-              tutorContainer.innerHTML += createTutorCard(tutor);
-            });
-          })
-          .catch((error) => console.error("Error loading tutor data:", error));
+      async function loadTutors() {
+        try {
+          const response = await fetch("tutors.json");
+          const data = await response.json();
+          const tutorContainer = document.getElementById("tutor-container");
+          for (const tutor of data) {
+            const cardHTML = await createTutorCard(tutor);
+            tutorContainer.innerHTML += cardHTML;
+          }
+        } catch (error) {
+          console.error("Error loading tutor data:", error);
+        }
       }
 
       document.addEventListener("DOMContentLoaded", loadTutors);
     </script>
+
     <!-- SCRIPT -->
   </body>
 </html>
