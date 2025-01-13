@@ -208,15 +208,17 @@
           img.onerror = () => resolve(defaultImagePath);
         });
 
+        const contactLink = tutor.contactLink.includes("@")
+          ? `mailto:${tutor.contactLink}`
+          : `https://wa.me/${tutor.contactLink}`;
+
         return `
     <div class="col">
       <div class="card h-100 p-4 card_tutor" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col column_tutor_card">
             <img src="${imageSrc}" class="card-img-top" alt="${tutor.name}" />
-            <a href="${
-              tutor.contactLink
-            }" class="button btn_tutor_card">Contact Me</a>
+            <a href="${contactLink}" class="button btn_tutor_card">Contact Me</a>
             <a href="${
               tutor.bookLink
             }" class="button btn_tutor_card">Book Now</a>
@@ -259,7 +261,6 @@
 
       document.addEventListener("DOMContentLoaded", loadTutors);
     </script>
-
     <!-- SCRIPT -->
   </body>
 </html>
