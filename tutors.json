@@ -96,7 +96,13 @@
   {
     "name": "Michelle",
     "languages": "English and Afrikaans",
-    "subjects": ["English"],
+    "subjects": [
+      "English",
+      "Afrikaans",
+      "Life orientation",
+      "Geography",
+      "History"
+    ],
     "ages": "All ages",
     "contactLink": "millermichelle537@gmail.com",
     "bookLink": "https://calendly.com/millermichelle537/tutoring-session-1"
@@ -110,9 +116,7 @@
       "Geography",
       "History",
       "Natural Science",
-      "Ems",
-      "Life Sciences",
-      "Accounting"
+      "Ems"
     ],
     "ages": "7-14 years old",
     "contactLink": "jovialemukoka78@gmail.com",
@@ -158,5 +162,20 @@
     "ages": "All ages",
     "contactLink": "fathimasuleman98@gmail.com",
     "bookLink": "https://calendly.com/fathima-s0/30min"
+  },
+  {
+    "name": "Lesha",
+    "languages": "English",
+    "subjects": [
+      "English",
+      "Tourism",
+      "Human & Social Services",
+      "Hospitality",
+      "Business Studies"
+    ],
+    "ages": "14-18 years old",
+    "imageUrl": "./Images/name_text.png",
+    "contactLink": "lesha.ramalingam@gmail.com",
+    "bookLink": "https://calendly.com/lesha-ramalingam/tutoring-session"
   }
 ]
