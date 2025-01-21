@@ -255,7 +255,9 @@ a.footer_link {
 .aboutUs_secion .color_slogn_text {
   padding: 70px;
 }
-
+.oboutUs_text {
+  font-size: 24px;
+}
 /* TUTORS */
 
 .section_tutors {
@@ -422,6 +424,9 @@ a.footer_link {
   .verified_img {
     width: 250px;
     height: 250px;
+  }
+  .oboutUs_text {
+    font-size: 20px;
   }
 }
 
