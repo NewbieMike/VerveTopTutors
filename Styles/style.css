@@ -267,8 +267,8 @@ a.footer_link {
 }
 .section_tutors .card-img-top {
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border: 1px solid #fff;
 }
@@ -428,6 +428,11 @@ a.footer_link {
   .oboutUs_text {
     font-size: 20px;
   }
+  .navbar-collapse.collapse.show {
+    width: 100vw;
+    height: 100%;
+    background-color: #fff;
+  }
 }
 
 @media (max-width: 500px) {
@@ -447,11 +452,7 @@ a.footer_link {
   .home_description_text {
     font-size: 18px;
   }
-  .navbar-collapse.collapse.show {
-    width: 100vw;
-    height: 100%;
-    background-color: #fff;
-  }
+
   .step {
     height: 180px;
   }
