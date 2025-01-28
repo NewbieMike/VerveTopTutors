@@ -169,11 +169,14 @@
     "subjects": [
       "English",
       "Tourism",
-      "Human & Social Services",
+      "Human & Social Sciences",
       "Hospitality",
-      "Business Studies"
+      "Business Studies",
+      "Geography",
+      "History",
+      "Life sciences"
     ],
-    "ages": "14-18 years old",
+    "ages": "7-14 years old",
     "imageUrl": "./Images/name_text.png",
     "contactLink": "lesha.ramalingam@gmail.com",
     "bookLink": "https://calendly.com/lesha-ramalingam/tutoring-session"
