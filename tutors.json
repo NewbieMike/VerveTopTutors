@@ -180,5 +180,15 @@
     "imageUrl": "./Images/name_text.png",
     "contactLink": "lesha.ramalingam@gmail.com",
     "bookLink": "https://calendly.com/lesha-ramalingam/tutoring-session"
+  },
+  {
+    "name": "Michal",
+    "languages": "English and Polish",
+    "subjects": [
+      "IT"
+    ],
+    "ages": "0-99 years old",
+    "contactLink": "",
+    "bookLink": ""
   }
 ]
