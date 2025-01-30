@@ -349,6 +349,34 @@ a.footer_link {
   font-weight: 700;
   font-size: 28px;
 }
+
+.tutors_filter_box {
+  position: fixed;
+  top: 20%;
+  left: 10px;
+  width: 200px;
+  height: 300px;
+}
+.subject_filters,
+.filter_by {
+  color: #000;
+}
+.subject_filters {
+  display: flex;
+  flex-direction: column;
+}
+.filters_btn {
+  width: 100%;
+  font-size: 22px;
+}
+.expand_filters_btn {
+  background-color: rgb(230, 189, 186);
+  color: #fff;
+}
+.expand_filters_btn:hover {
+  color: #000;
+  background-color: #fff;
+}
 /* BECOME TUTOR */
 .advantages_section {
   padding-top: 70px;

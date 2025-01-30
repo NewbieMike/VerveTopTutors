@@ -78,71 +78,58 @@
           Find your tutor
         </h3>
         <div class="card_container">
-          <div class="row row-cols-xxl-2 g-4" id="tutor-container">
-            <!-- <div class="col">
-              <div
-                class="card h-100 p-4 card_tutor"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-                data-aos-delay="300"
-              >
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                  <div class="col column_tutor_card">
-                    <img
-                      src="./Images/name_text.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <a
-                      href="https://wa.me/27823218939"
-                      class="button btn_tutor_card"
-                      >Contact Me</a
-                    >
-                    <a
-                      href="https://calendly.com/dalizeverve/tutoring"
-                      class="button btn_tutor_card"
-                      >Book Now</a
-                    >
-                  </div>
-                  <div class="col column_tutor_card_description">
-                    <h4 class="tutor_title">
-                      My Name is <span class="color_pink">Dalize</span>
-                    </h4>
-                    <p class="tutor_subtitle">I speak English and Afrikaans</p>
-                    <p><span class="color_pink">Subjects:</span></p>
-                    <ul class="tutor_skills">
-                      <li>English</li>
-                      <li>Afrikaans</li>
-                      <li>Maths</li>
-                      <li>Life orientation</li>
-                    </ul>
-                    <p><span class="color_pink">Ages: </span>11-15 years old</p>
-                    <div class="d-flex align-items-center mt-5">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="30"
-                        height="30"
-                        fill="currentColor"
-                        class="bi bi-patch-check-fill"
-                        viewBox="0 0 16 16"
-                        style="margin-right: 5px"
-                      >
-                        <path
-                          d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708"
-                        />
-                      </svg>
-                      Verified Tutor
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer"></div>
-            </div> -->
-          </div>
+          <div class="row row-cols-xxl-2 g-4" id="tutor-container"></div>
         </div>
       </div>
     </section>
     <!-- TUTORS -->
+    <!-- FILTER BOX -->
+    <div class="tutors_filter_box">
+      <button
+        class="btn btn_tutor_card expand_filters_btn"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasWithBothOptions"
+        aria-controls="offcanvasWithBothOptions"
+      >
+        Expand filters
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-bar-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          Filter
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body" id="tutor-filter-container"></div>
+    </div>
+    <!-- FILTER BOX -->
     <!-- FOOTER -->
     <footer>
       <div class="container d-flex flex-wrap">
@@ -200,25 +187,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init();
+      document.addEventListener("DOMContentLoaded", () => {
+        const tutorContainer = document.getElementById("tutor-container");
+        const tutorFilterContainer = document.getElementById(
+          "tutor-filter-container"
+        );
+        const filterContainer = document.createElement("div");
+        filterContainer.classList.add("mb-4");
+        // filterContainer.innerHTML = `<div class="tutors_filter_box"><h5 class="filter_by">Filter by Subject:</h5><div id="subject-filters" class="subject_filters"></div><button id="show-more" class="button btn_tutor_card">Show More</button></div>`;
+        tutorFilterContainer.innerHTML = `<div class=""><h5 class="filter_by">by Subject:</h5><div id="subject-filters" class="subject_filters"></div><button id="show-more" class="button btn_tutor_card filters_btn">Show more subjects</button></div>`;
+        tutorContainer.parentElement.insertBefore(
+          filterContainer,
+          tutorContainer
+        );
 
-      async function createTutorCard(tutor) {
-        const imagePath = `./Images/Tutors_images/${tutor.name}.jpg`;
-        const defaultImagePath = `./Images/name_text.png`;
+        async function createTutorCard(tutor) {
+          const imagePath = `./Images/Tutors_images/${tutor.name}.jpg`;
+          const defaultImagePath = `./Images/name_text.png`;
 
-        const imageSrc = await new Promise((resolve) => {
-          const img = new Image();
-          img.src = imagePath;
-          img.onload = () => resolve(imagePath);
-          img.onerror = () => resolve(defaultImagePath);
-        });
+          const imageSrc = await new Promise((resolve) => {
+            const img = new Image();
+            img.src = imagePath;
+            img.onload = () => resolve(imagePath);
+            img.onerror = () => resolve(defaultImagePath);
+          });
 
-        const contactLink = tutor.contactLink.includes("@")
-          ? `mailto:${tutor.contactLink}`
-          : `https://wa.me/${tutor.contactLink}`;
+          const contactLink = tutor.contactLink.includes("@")
+            ? `mailto:${tutor.contactLink}`
+            : `https://wa.me/${tutor.contactLink}`;
 
-        return `
+          return `
     <div class="col">
-      <div class="card h-100 p-4 card_tutor" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+      <div class="card h-100 p-4 card_tutor">
         <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col column_tutor_card">
             <img src="${imageSrc}" class="card-img-top" alt="${tutor.name}" />
@@ -247,23 +247,87 @@
         </div>
       </div>
     </div>`;
-      }
+        }
 
-      async function loadTutors() {
-        try {
-          const response = await fetch("tutors.json");
-          const data = await response.json();
-          const tutorContainer = document.getElementById("tutor-container");
-          for (const tutor of data) {
+        async function loadTutors() {
+          try {
+            const response = await fetch("tutors.json");
+            const tutors = await response.json();
+            displayTutors(tutors);
+            createSubjectFilters(tutors);
+          } catch (error) {
+            console.error("Error loading tutor data:", error);
+          }
+        }
+
+        function displayTutors(tutors) {
+          tutorContainer.innerHTML = "";
+          tutors.forEach(async (tutor) => {
             const cardHTML = await createTutorCard(tutor);
             tutorContainer.innerHTML += cardHTML;
-          }
-        } catch (error) {
-          console.error("Error loading tutor data:", error);
+          });
         }
-      }
 
-      document.addEventListener("DOMContentLoaded", loadTutors);
+        function createSubjectFilters(tutors) {
+          const subjectFilters = document.getElementById("subject-filters");
+          subjectFilters.innerHTML = "";
+
+          let subjects = new Set();
+          tutors.forEach((tutor) =>
+            tutor.subjects.forEach((subject) => subjects.add(subject))
+          );
+          subjects = Array.from(subjects).sort();
+
+          const initialSubjects = subjects.slice(0, 10);
+          const remainingSubjects = subjects.slice(10);
+
+          initialSubjects.forEach((subject) =>
+            addSubjectFilter(subject, subjectFilters)
+          );
+
+          const showMoreButton = document.getElementById("show-more");
+          showMoreButton.addEventListener("click", () => {
+            remainingSubjects.forEach((subject) =>
+              addSubjectFilter(subject, subjectFilters)
+            );
+            showMoreButton.style.display = "none";
+          });
+        }
+
+        function addSubjectFilter(subject, container) {
+          const label = document.createElement("label");
+          label.classList.add("me-2");
+          label.innerHTML = `<input type="checkbox" value="${subject}" class="subject-checkbox"> ${subject}`;
+          container.appendChild(label);
+
+          label
+            .querySelector("input")
+            .addEventListener("change", () => filterTutors());
+        }
+
+        function filterTutors() {
+          const selectedSubjects = Array.from(
+            document.querySelectorAll(".subject-checkbox:checked")
+          ).map((cb) => cb.value);
+
+          fetch("tutors.json")
+            .then((response) => response.json())
+            .then((tutors) => {
+              if (selectedSubjects.length === 0) {
+                displayTutors(tutors);
+              } else {
+                const filteredTutors = tutors.filter((tutor) =>
+                  tutor.subjects.some((subject) =>
+                    selectedSubjects.includes(subject)
+                  )
+                );
+                displayTutors(filteredTutors);
+              }
+            });
+        }
+
+        loadTutors();
+      });
     </script>
     <!-- SCRIPT -->
   </body>
