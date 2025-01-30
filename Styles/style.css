@@ -354,8 +354,8 @@ a.footer_link {
   position: fixed;
   top: 20%;
   left: 10px;
-  width: 200px;
-  height: 300px;
+  width: auto;
+  /* height: 300px; */
 }
 .subject_filters,
 .filter_by {
@@ -372,6 +372,9 @@ a.footer_link {
 .expand_filters_btn {
   background-color: rgb(230, 189, 186);
   color: #fff;
+  min-width: 50px;
+  width: auto;
+  padding: 5px 20px;
 }
 .expand_filters_btn:hover {
   color: #000;
